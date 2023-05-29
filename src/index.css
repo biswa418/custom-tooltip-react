@@ -19,6 +19,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -27,6 +28,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -47,9 +49,121 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
+.container {
+  position: relative;
+}
+
+/* top */
+.tooltip-top {
+  position: absolute;
+  height: max-content;
+  width: max-content;
+  padding: 4%;
+  padding-inline: 10%;
+  border-radius: 8px;
+  background-color: #646cff;
+  top: -60px;
+  left: 0%;
+}
+
+.tooltip-top::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -9px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #646cff;
+}
+
+/* bottom */
+.tooltip-btm {
+  position: absolute;
+  height: max-content;
+  width: max-content;
+  padding: 4%;
+  padding-inline: 10%;
+  border-radius: 8px;
+  background-color: #646cff;
+  bottom: -60px;
+  left: 0%;
+}
+
+.tooltip-btm::after {
+  content: '';
+  display: block;
+  position: absolute;
+  transform: rotate(180deg);
+  top: -9px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #646cff;
+}
+
+
+/* left */
+.tooltip-left {
+  position: absolute;
+  height: 120%;
+  width: 50%;
+  padding: 4%;
+  padding-inline: 10%;
+  border-radius: 8px;
+  background-color: #646cff;
+  right: 110%;
+  top: -10px;
+}
+
+.tooltip-left::after {
+  content: '';
+  display: block;
+  position: absolute;
+  transform: rotate(-90deg);
+  right: -13px;
+  top: 45%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #646cff;
+}
+
+/* right */
+.tooltip-right {
+  position: absolute;
+  height: 120%;
+  width: 50%;
+  padding: 4%;
+  padding-inline: 10%;
+  border-radius: 8px;
+  background-color: #646cff;
+  left: 110%;
+  top: -10px;
+}
+
+.tooltip-right::after {
+  content: '';
+  display: block;
+  position: absolute;
+  transform: rotate(90deg);
+  left: -13px;
+  top: 45%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #646cff;
+}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -60,9 +174,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Tooltip = (props) => {
-    let position = props.position;
-    position === 'bottom' ? position = 'btm' : position;
+    let pos = props.position;
+    pos === 'bottom' ? pos = 'btm' : pos;
 
     return (
-        <div className={`tooltip-${position}`}>Thanks for hovering! </div>
+        <div className={`tooltip-${pos}`}>Thanks for hovering! </div>
     )
 }
 

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Tooltip from './Tooltip'
 
 function App() {
-  const [hovering, setHovering] = useState(true);
+  const [hovering, setHovering] = useState(false);
 
   function handleMouseOver() {
     setHovering(true)
